@@ -23,7 +23,9 @@ function line(p) {
 
 function main() {
   const config = loadConfig();
-  runPipeline({ config }).then((r) => {
+  const providerName = process.env.PROVIDER || 'sample';
+  const window = process.env.MAX_ACCOUNTS ? { maxAccounts: Number(process.env.MAX_ACCOUNTS) } : {};
+  runPipeline({ config, providerName, window }).then((r) => {
     if (process.argv.includes('--json')) {
       process.stdout.write(JSON.stringify(r, null, 2));
       return;

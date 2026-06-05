@@ -5,9 +5,24 @@ import { analyzePosts } from './core/score.js';
 import { relevanceOf, controversyFlag } from './core/filter.js';
 import { buildShortlists } from './core/rank.js';
 
+// Flatten all `handle`s from the tiered config/accounts.yaml. Tiers without an
+// `accounts` array (e.g. competitive_watch `candidates`) are skipped.
+export function getTrackedHandles(config, limit) {
+  const accts = config.accounts || {};
+  const handles = [];
+  for (const key of Object.keys(accts)) {
+    const tier = accts[key];
+    if (tier && Array.isArray(tier.accounts)) {
+      for (const a of tier.accounts) if (a && a.handle) handles.push(a.handle);
+    }
+  }
+  return limit ? handles.slice(0, limit) : handles;
+}
+
 export async function runPipeline({ config, providerName = 'sample', window = {} }) {
   const provider = getProvider(providerName);
-  const posts = await provider.getPosts(window);
+  const accounts = getTrackedHandles(config, window.maxAccounts);
+  const posts = await provider.getPosts({ ...window, accounts });
 
   const scored = analyzePosts(posts, config.scoring);
 
