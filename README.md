@@ -50,16 +50,32 @@ The system is a **weekly batch pipeline** split into a deterministic half (cheap
 testable, no tokens) and a judgement half (LLM). Volatility (data access) is isolated behind
 one adapter; everything else is stable.
 
-```
-            ┌──────────────── DETERMINISTIC (code) ────────────────┐   ┌──────── JUDGEMENT (LLM) ────────┐
-            │                                                       │   │                                  │
- config/ ─► │  DataProvider ─► score ─► filter ─► rank ─► shortlist │─► │ Analyst ─► Ideator ─► Packager   │─► BRIEF
- (accounts, │  (sample|apify   weighted relevance  Ride-Now /       │   │ (why it   (on-brand  (executable │   briefs/
-  topics,   │   |xapi)         +quadrant +guard    Build-Engine     │   │  worked)   ideas)     weekly doc) │   <date>.md
-  scoring)  │                                                       │   │  ▲ reads knowledge/ taxonomy+voice│
-            └───────────────────────────────────────────────────────┘   └──────────────────────────────────┘
-                         │                                                              │
-                  state/pattern_library.json  ◄──────── compounds weekly ───────────────┘
+```mermaid
+flowchart TB
+    subgraph IN["📥 Inputs — human-owned"]
+        cfg["config<br/>accounts · topics · scoring"]
+        kn["knowledge<br/>taxonomy · brand voice"]
+    end
+    subgraph DET["⚙️ Deterministic core — code, no tokens"]
+        prov["Data Provider<br/>sample | apify | xapi"]
+        score["Score<br/>weighted → rate → baseline → quadrant"]
+        filt["Filter<br/>relevance + controversy guard"]
+        rank["Rank<br/>Ride-Now / Build-Engine"]
+    end
+    subgraph JUDGE["🧠 Judgement — LLM agents"]
+        an["Analyst<br/>why it worked"]
+        id["Ideator<br/>on-brand ideas"]
+        pk["Packager<br/>the brief"]
+    end
+    state[("state<br/>pattern library")]
+    brief["📄 briefs/[date].md"]
+
+    cfg --> prov --> score --> filt --> rank
+    rank --> an --> id --> pk --> brief
+    kn --> an
+    kn --> id
+    pk --> state
+    state -. compounds weekly .-> an
 ```
 
 **Design principles**
@@ -79,6 +95,27 @@ one adapter; everything else is stable.
 - **Claude Code** (`.claude/commands/weekly-brief.md`) — orchestrates the full agent flow.
 - **Static dashboard** (`web/`) — a zero-dependency presentation of the latest run.
 - **Interactive app** (`web-app/`) — Next.js: paste JSON → analyze in-browser → generate brief.
+
+**The weekly flow, with the two human gates:**
+
+```mermaid
+flowchart TD
+    start([Weekly trigger]) --> g1{{"👤 gate: config current?"}}
+    g1 --> fetch["Fetch top posts<br/>(last 7 days)"]
+    fetch --> score["Score<br/>weighted · rate · baseline · breakout"]
+    score --> filter["Filter relevance<br/>+ flag controversy"]
+    filter --> rank["Rank → Ride-Now / Build-Engine"]
+    rank --> analyst["Analyst: why + patterns"]
+    analyst --> ideator["Ideator: on-brand drafts"]
+    ideator --> packager["Packager: assemble brief"]
+    packager --> g2{{"👤 gate: approve / edit"}}
+    g2 -->|approved| publish["Publish<br/>+ save approved → voice examples"]
+    g2 -->|needs work| ideator
+    publish --> done([Done])
+```
+
+> Full diagram set (system context, sequence, web request flow, deployment) +
+> a principal-engineer's guide to drawing them: **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)**.
 
 ---
 
@@ -130,6 +167,26 @@ baseline_pct  = percentileRank(medRate, [reliable authors])  // cross-author con
 |---|---|---|
 | **breakout HIGH** | ⭐ `proven_peak` | 🔥 `trend` |
 | **breakout LOW** | 🏗 `durable` | `noise` |
+
+**The same logic as a decision flow (one post → one bucket):**
+
+```mermaid
+flowchart TD
+    p["Post"] --> rel{"relevant?<br/>(topic match)"}
+    rel -->|no| excl[["excluded (off-topic)"]]
+    rel -->|yes| w["weighted = Σ wᵢ · actionᵢ"]
+    w --> r["rate = weighted / (views or followers)"]
+    r --> base{"author reliable?<br/>≥3 posts AND medWeighted ≥ 25"}
+    base -->|no| unrated[["unrated (context only)"]]
+    base -->|yes| bo["breakout = weighted / medWeighted<br/>baseline_pct = rank of medRate"]
+    bo --> q1{"breakout ≥ 2.0 ?"}
+    q1 -->|yes| q2{"baseline ≥ p66 ?"}
+    q1 -->|no| q3{"baseline ≥ p66 ?"}
+    q2 -->|yes| peak["⭐ PEAK<br/>Ride-Now + Build-Engine"]
+    q2 -->|no| trend["🔥 TREND<br/>Ride-Now"]
+    q3 -->|yes| dur["🏗 DURABLE<br/>Build-Engine"]
+    q3 -->|no| noise["· noise — drop"]
+```
 
 ### Filter + guard (`src/core/filter.js`)
 - **Relevance** — keyword match against a niche term list; no match ⇒ excluded (drops
