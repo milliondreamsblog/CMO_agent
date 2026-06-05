@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# build artifacts / caches
+.next/
+dist/
+.astro/
+.vercel/
+.turbo/
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+
+# logs / os
+*.log
+.DS_Store
+Thumbs.db

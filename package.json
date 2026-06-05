@@ -1,0 +1,22 @@
+{
+  "name": "bricx-content-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Weekly AI agent for Bricx Labs: finds top X content, analyzes why it worked, ideates on-brand posts, packages an executable brief.",
+  "scripts": {
+    "analyze": "node scripts/run-analysis.js",
+    "analyze:json": "node scripts/run-analysis.js --json",
+    "build:dashboard": "node scripts/build-dashboard.js",
+    "web": "npm run analyze && node scripts/build-dashboard.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "marked": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
