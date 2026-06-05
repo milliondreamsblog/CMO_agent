@@ -1,0 +1,91 @@
+# =============================================================================
+# accounts.yaml  —  "Our Industry" on X  (the RESEARCH input set)
+# =============================================================================
+# WHY THIS LIST (documented logic — part of the assignment):
+#
+# Bricx's growth channel is the founder, @siddharthvij_ (10.5K, live), not the
+# dormant @bricxlabs brand account (110 followers, portfolio graveyard).
+#
+# Tier 1 MIRRORS Sid's own follow graph — an Indian product-designer cluster.
+# It's excellent for design CRAFT + peer-community resonance, but it skews to
+# *employed designers* (the audience) and under-covers the *buyers* (SaaS
+# founders) and the *format teachers* (build-in-public + growth operators).
+#
+# So Tiers 2–4 deliberately EXTEND beyond his graph to cover:
+#   - who Bricx actually sells to (venture-backed SaaS/AI, seed–Series A), and
+#   - the people who master the viral STRUCTURES we want to learn.
+#
+# Tagging: each account's `tier` flows into the Post schema and routes analysis.
+# `source: mirror` = from Sid's follows. `source: extension` = our addition.
+# =============================================================================
+
+tier_1_design_craft:       # mirrored from @siddharthvij_'s follows
+  why: "Design substance + the exact peer community Sid already converses with."
+  source: mirror
+  accounts:
+    - handle: hvpandya       # SVP Design @Pocket; ex Atlassian/Google — design thinking & leadership
+    - handle: JeevanshuN     # Lead Product Designer @Swiggy — product design in the trenches
+    - handle: Sagar_bdwj     # Lead Product Design @UrbanCompany; building — design + build-in-public
+    - handle: abnux          # designs for AI founders; runs @10kdesigners — design + AI + audience
+    - handle: realvjy        # indie maker (3dicons, overlayz) — free-tool / build-in-public playbook
+    - handle: pixelandpump   # ex CRED/cult; founder designdrug — high craft + founder energy
+    - handle: yug_design     # designer @procol; building + memes — format study
+    - handle: Ash_uxi        # design + code; makes tools (pikaicon) — maker / build-in-public
+    - handle: dharmeshba     # The India Notes (17k subs) — content/writing format crossover
+    - handle: rachitxdesign  # "0 to 1 designer" — positioning matches Bricx's seed-stage clients
+
+tier_2_saas_founders:      # EXTENSION — the buyers + build-in-public format masters
+  why: "Bricx sells to venture-backed SaaS/AI founders; these teach the case-study & numbers formats Bricx says it wants but isn't producing."
+  source: extension
+  verify: true             # proposed by us — confirm fit before live use
+  accounts:
+    - handle: thepatwalls    # Starter Story — first-person teardowns, hard numbers
+    - handle: arvidkahl      # bootstrapped SaaS — build-in-public + audience-building wisdom
+    - handle: marc_louvion   # ship-fast indie SaaS — build-in-public
+    - handle: levelsio       # the build-in-public archetype — numbers-driven transparency
+    - handle: tdinh_me       # Tony Dinh — indie SaaS build-in-public
+
+tier_3_growth_operators:   # EXTENSION — teach the viral STRUCTURES
+  why: "Format teachers. We learn the hook/thread/structure mechanics here, then adapt to Bricx's voice."
+  source: extension
+  verify: true
+  accounts:
+    - handle: gregisenberg   # community + startup ideas — thread architecture
+    - handle: thejustinwelsh # solopreneur content systems — repeatable format master
+    - handle: dickiebush     # writing/hooks teacher (Ship 30) — hook mechanics
+
+tier_4_ai_builders:        # EXTENSION (lightest) — Bricx targets "AI & B2B SaaS"
+  why: "Keeps us close to the AI-product wave Bricx positions around."
+  source: extension
+  verify: true
+  accounts:
+    - handle: AnshMehraaa    # from Sid's follows — AI adoption for enterprises (founder, not designer)
+    - handle: swyx           # AI engineering — build-in-public, strong content patterns
+
+tier_5_competitive_watch:  # EXTENSION — rival SaaS/UX design agencies
+  why: >
+    Same audience, same angle as Bricx → the most directly transferable signal,
+    and a read on competitive white-space. DUAL PURPOSE, handled differently from
+    other tiers: (1) learn the pattern but DIFFERENTIATE the angle (never copy a
+    competitor's voice); (2) surface what rivals AREN'T covering = Bricx's opening.
+  source: extension
+  verify: true              # MOST agency *brand* accounts are dead portfolio feeds —
+                            # prioritize FOUNDER-LED accounts that actually post on X.
+  usage_note: "Tag ideas modeled on these as 'competitor pattern → Bricx's distinct spin'."
+  candidates:               # real SaaS/B2B design agencies — VERIFY each is active on X
+                            # and find the founder's personal handle (higher signal than the brand)
+    - agency: Eleken        # SaaS UI/UX agency — content/blog heavy
+    - agency: Procreator    # product design agency
+    - agency: Ramotion      # brand + product design for SaaS
+    - agency: "Clay (clay.global)"  # high-end product/brand design
+    - agency: "Halo Lab"    # SaaS/web product design
+  todo: "Replace agency names with verified founder handles + brand handles once checked on X."
+
+# -----------------------------------------------------------------------------
+# Excluded from Sid's follows (logged for transparency):
+#   rishfishtish  — illustration/personal, off-topic for SaaS UX content
+#   mahaveer2407  — no bio, no signal
+#   abhnvx        — "now family biz", left design
+#   dwijaxo       — audience too small to learn from
+#   smeeetwt, vishlbhardwaj — fine but redundant with stronger Tier-1 picks
+# -----------------------------------------------------------------------------

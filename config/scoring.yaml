@@ -1,0 +1,27 @@
+# =============================================================================
+# scoring.yaml  —  the tunable knobs for the deterministic scoring core
+# =============================================================================
+# These are HYPOTHESES, not truths. Tuned for save-worthy insight content
+# (Bricx's niche), not raw virality. Adjust as real outcome data accrues.
+# =============================================================================
+
+# Intent-weighted engagement: weight by how much effort/signal each action carries.
+# Bookmarks + quotes top (save = strongest signal for insight content); likes baseline.
+weights:
+  like: 1
+  repost: 3
+  reply: 3      # discounted vs effort because replies are ambiguous (see controversy guard)
+  quote: 5
+  bookmark: 5
+
+thresholds:
+  breakout_high: 2.0           # post must beat 2x its author's median weighted engagement to "spike"
+  baseline_high_pct: 66        # author's size-normalized rate in top third of tracked set = "consistent"
+  controversy_reply_ratio: 2.0 # replies / likes above this ...
+  controversy_min_replies: 30  # ... AND at least this many replies => flag "verify" (possible ratio)
+
+min_posts_for_baseline: 3      # need >= this many posts/author to trust a median
+min_baseline_weighted: 25      # below this, the author's baseline is near-zero => breakout ratios are noise
+
+reach:
+  prefer: views                # rate = weighted / views; fall back to followers when views missing/0

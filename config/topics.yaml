@@ -1,0 +1,46 @@
+# =============================================================================
+# topics.yaml  —  the TOPICS/keywords that define "our industry" content
+# =============================================================================
+# Used to (a) filter scanned posts to what's relevant to Bricx, and
+# (b) seed the "this week's theme" line in the brief.
+#
+# Logic: anchored on Bricx's stated pillars — "insights, lessons, case studies,
+# design thinking" — plus their positioning (UX as a REVENUE lever for AI &
+# B2B SaaS, seed–Series A) and the founder's proven topics (speed, hiring,
+# community questions).
+# =============================================================================
+
+core_design:
+  - UI/UX design for SaaS
+  - product design process
+  - design systems
+  - landing pages and hero sections
+  - onboarding / activation / conversion UX
+
+revenue_angle:            # Bricx's distinctive POV — design that drives business outcomes
+  - design that drives revenue
+  - conversion-rate design
+  - UX teardowns / redesign case studies
+  - before/after redesign with metrics
+
+build_in_public:          # the founder's live channel + the format we want to learn
+  - building a design agency
+  - agency growth / client work
+  - MRR / milestones / "year in review"
+  - hiring and team building
+
+ai_saas:                  # Bricx positions around "AI & B2B SaaS"
+  - AI product design
+  - designing for AI startups
+  - AI tooling for designers
+
+community_prompts:        # Sid's signature engagement format
+  - who's the best ___ recommendation threads
+  - which design do you pick option polls
+  - hot takes on design tools / trends
+
+# Negative filters — topics to ignore even if they trend in the scanned set:
+exclude:
+  - pure illustration / personal art
+  - non-SaaS consumer app design with no business angle
+  - design-tool drama / pile-ons (off-brand for a premium agency)
