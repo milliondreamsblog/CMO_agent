@@ -28,9 +28,10 @@ potential SaaS.
 - Weekly GitHub Actions cron (opens a PR for review)
 - Docs: README (HLD/LLD + Mermaid), ARCHITECTURE, DECISIONS, SAAS_ARCHITECTURE, LOOM_SCRIPT
 - Repo live, MIT licensed, clean commit history
+- **Astro/Cloudflare marketing site** (`content-engine/`) — built & verified locally
+  *(not yet in git; folds into the monorepo at Phase 3, per decision)*
 
 **❌ Not built yet**
-- **Astro/Cloudflare marketing site** (only empty folders exist)
 - Real X data integration (Apify) — still on sample data
 - Engine as a shared TypeScript package (currently duplicated: `src/` + `web-app/lib/engine/`)
 - Multi-tenant SaaS (auth, DB, billing)
@@ -82,7 +83,7 @@ Turborepo (Phase 3)
 ## 6 · Phased roadmap
 
 - **Phase 0 — Ship the assignment.** Record the Loom from `LOOM_SCRIPT.md`. *(Job deliverable; do not let the product work block this.)*
-- **Phase 1 — Marketing site.** Astro + TS on Cloudflare Pages: SEO landing (hero, how-it-works, features, the flywheel) + waitlist. Deployable.
+- **Phase 1 — Marketing site. ✅ BUILT** (`content-engine/`). Astro + TS on Cloudflare Pages: SEO landing (hero, how-it-works, features, the flywheel) + waitlist. Builds clean; deploy = connect to Cloudflare Pages. Folds into the monorepo at Phase 3.
 - **Phase 2 — Real data spike.** Implement the Apify provider, run end-to-end for ONE real account, **measure cost-per-run**. Gate: is the data economics sane?
 - **Phase 3 — Monorepo + consolidation.** Turborepo; extract `packages/engine` (TS) as the single source of truth; tidy the app.
 - **Phase 4 — Multi-tenant SaaS.** Supabase (DB) · Clerk (auth) · Stripe (billing) · per-workspace config + weekly cron.
@@ -93,8 +94,10 @@ Turborepo (Phase 3)
 ## 7 · Immediate next 3 actions
 
 1. **Record the Loom** (Phase 0) — closes the assignment.
-2. **Build the Astro/Cloudflare marketing site** (Phase 1) — the missing surface.
-3. **Apify data spike** (Phase 2) — de-risk the one thing that decides if this is a business.
+2. **Apify data spike** (Phase 2) — de-risk the one thing that decides if this is a business.
+3. **Deploy** — app to Vercel, marketing site to Cloudflare Pages (both need just an env key/connect).
+
+*Done: Phase 1 marketing site built (`content-engine/`).*
 
 > Rule for ourselves: **one phase at a time, finish before starting the next.** No more
 > half-built surfaces. Update this file when a decision changes.
