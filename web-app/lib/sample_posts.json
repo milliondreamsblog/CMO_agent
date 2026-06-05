@@ -1,0 +1,280 @@
+{
+  "_meta": {
+    "purpose": "Sample dataset for the Bricx weekly content agent. Read by SampleProvider.",
+    "honesty_note": "Each post is tagged source=real (collected from X, real text + real visible stats) or source=synthetic (fabricated to round out author baselines and exercise edge cases). followers_estimated=true means the follower count was approximated. In production the Apify/X-API adapter replaces this file; the schema is identical.",
+    "demo_window": { "since": "2026-05-20", "until": "2026-06-03", "note": "Production lookback is 7 days; the demo widens it to ~2 weeks so the curated set falls in range." },
+    "designed_to_exercise": [
+      "DURABLE author (saas_teardowns) -> Build-the-Engine section",
+      "TREND breakout (JeevanshuN rant, vishlbhardwaj launch) -> Ride-Now section",
+      "PEAK (siddharthvij_ milestone) -> strongest signal",
+      "controversy guard (JeevanshuN hot-take: replies >> likes)",
+      "relevance filter (luusssso: huge engagement but off-topic for SaaS UX)",
+      "dead-brand contrast (bricxlabs: near-zero engagement portfolio dumps)"
+    ],
+    "schema": "id, url, created_at, author{handle,name,followers,following,verified,tier}, engagement{likes,reposts,replies,quotes,bookmarks,views}, content{text,media_type,media_count,is_thread,thread_len,has_link,post_type}, _source"
+  },
+
+  "posts": [
+
+    {
+      "id": "sv-001",
+      "url": "https://x.com/siddharthvij_/status/sv001",
+      "created_at": "2025-12-18T09:33:00+05:30",
+      "author": { "handle": "siddharthvij_", "name": "Siddharth Vij", "followers": 10500, "following": 970, "verified": true, "tier": "founders" },
+      "engagement": { "likes": 139, "reposts": 4, "replies": 21, "quotes": 3, "bookmarks": 63, "views": 13100 },
+      "content": { "text": "Second year of building my dream design agency.\n\n2025 gave us 23 clients, 38 projects, and a team of 9.\n\nHere's a small glimpse of our work at bricxlabs.com", "media_type": "video", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": true, "post_type": "original" },
+      "_source": "real"
+    },
+    {
+      "id": "sv-002",
+      "url": "https://x.com/siddharthvij_/status/sv002",
+      "created_at": "2026-05-19T12:04:00+05:30",
+      "author": { "handle": "siddharthvij_", "name": "Siddharth Vij", "followers": 10500, "following": 970, "verified": true, "tier": "founders" },
+      "engagement": { "likes": 24, "reposts": 2, "replies": 41, "quotes": 1, "bookmarks": 3, "views": 2236 },
+      "content": { "text": "who's the best motion designer making SaaS launch videos right now?\n\nasking for a project. tag them.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real"
+    },
+    {
+      "id": "sv-003",
+      "url": "https://x.com/siddharthvij_/status/sv003",
+      "created_at": "2026-05-06T11:15:00+05:30",
+      "author": { "handle": "siddharthvij_", "name": "Siddharth Vij", "followers": 10500, "following": 970, "verified": true, "tier": "founders" },
+      "engagement": { "likes": 18, "reposts": 1, "replies": 29, "quotes": 0, "bookmarks": 5, "views": 1840 },
+      "content": { "text": "who has the best seo agency?\n\nwe need someone who understands search intent, ranking on AI search, and has AI processes dialed in to rank on search.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real"
+    },
+    {
+      "id": "sv-004",
+      "url": "https://x.com/siddharthvij_/status/sv004",
+      "created_at": "2026-05-22T10:20:00+05:30",
+      "author": { "handle": "siddharthvij_", "name": "Siddharth Vij", "followers": 10500, "following": 970, "verified": true, "tier": "founders" },
+      "engagement": { "likes": 31, "reposts": 3, "replies": 22, "quotes": 2, "bookmarks": 14, "views": 4100 },
+      "content": { "text": "hiring: X content strategist\n\nyou need to be a designer who literally lives on X.\n\nyou will research trends and create viral content around it.\n\nfull time role. dm me with your top 3 posts.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real"
+    },
+    {
+      "id": "sv-005",
+      "url": "https://x.com/siddharthvij_/status/sv005",
+      "created_at": "2026-04-21T13:40:00+05:30",
+      "author": { "handle": "siddharthvij_", "name": "Siddharth Vij", "followers": 10500, "following": 970, "verified": true, "tier": "founders" },
+      "engagement": { "likes": 42, "reposts": 2, "replies": 58, "quotes": 1, "bookmarks": 9, "views": 3500 },
+      "content": { "text": "which hero section are you picking?", "media_type": "image", "media_count": 4, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real"
+    },
+    {
+      "id": "sv-006",
+      "url": "https://x.com/siddharthvij_/status/sv006",
+      "created_at": "2026-05-28T09:10:00+05:30",
+      "author": { "handle": "siddharthvij_", "name": "Siddharth Vij", "followers": 10500, "following": 970, "verified": true, "tier": "founders" },
+      "engagement": { "likes": 51, "reposts": 3, "replies": 12, "quotes": 1, "bookmarks": 22, "views": 4800 },
+      "content": { "text": "a good design partner doesn't ask 'what do you want it to look like.'\n\nthey ask 'what number are we trying to move.'\n\nthat's the whole difference.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+
+    {
+      "id": "jn-001",
+      "url": "https://x.com/JeevanshuN/status/jn001",
+      "created_at": "2026-04-28T22:51:00+05:30",
+      "author": { "handle": "JeevanshuN", "name": "Jeevanshu Narang", "followers": 8800, "following": 540, "verified": false, "tier": "design" },
+      "engagement": { "likes": 219, "reposts": 19, "replies": 17, "quotes": 5, "bookmarks": 52, "views": 16300 },
+      "content": { "text": "Crazy times in design industry. Wanted to rant a bit about something I've been noticing.\n\nPeople with barely any real experience with AI are launching AI & design courses. You learnt what a PR and a merge is only a few weeks ago, calm down.\n\nSaw someone selling a PDF for 'how to crack interviews at top design companies'... for companies they couldn't crack themselves.\n\nFeels like when things get boring, people pivot to building an audience, and when that doesn't stick, they start selling courses.\n\nEveryone's chasing attention. Very few are building actual depth. And the cost? Early designers already anxious about AI end up paying for noise.\n\nIf you're an experienced designer who mentors aspiring designers, paid or free, I salute you.\n\nFor those early and liking the attention: please be responsible. There's a lot to learn.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true
+    },
+    {
+      "id": "jn-002",
+      "url": "https://x.com/JeevanshuN/status/jn002",
+      "created_at": "2026-05-24T19:30:00+05:30",
+      "author": { "handle": "JeevanshuN", "name": "Jeevanshu Narang", "followers": 8800, "following": 540, "verified": false, "tier": "design" },
+      "engagement": { "likes": 64, "reposts": 3, "replies": 8, "quotes": 1, "bookmarks": 11, "views": 3400 },
+      "content": { "text": "spent the morning redoing the empty states for CREW.\n\nan empty state is not a dead end, it's the best onboarding surface you have. show the user what 'full' looks like.", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "jn-003",
+      "url": "https://x.com/JeevanshuN/status/jn003",
+      "created_at": "2026-05-30T11:05:00+05:30",
+      "author": { "handle": "JeevanshuN", "name": "Jeevanshu Narang", "followers": 8800, "following": 540, "verified": false, "tier": "design" },
+      "engagement": { "likes": 38, "reposts": 1, "replies": 5, "quotes": 0, "bookmarks": 6, "views": 2600 },
+      "content": { "text": "reminder: a doodle a day keeps the creative block away. here's today's.", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "jn-004",
+      "url": "https://x.com/JeevanshuN/status/jn004",
+      "created_at": "2026-05-27T16:20:00+05:30",
+      "author": { "handle": "JeevanshuN", "name": "Jeevanshu Narang", "followers": 8800, "following": 540, "verified": false, "tier": "design" },
+      "engagement": { "likes": 72, "reposts": 4, "replies": 9, "quotes": 1, "bookmarks": 18, "views": 4100 },
+      "content": { "text": "things I wish someone told me in year 1 of product design:\n\n- the spec is a hypothesis, not a contract\n- ship the boring fix before the clever one\n- your craft means nothing if the eng team can't build it", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "jn-005",
+      "url": "https://x.com/JeevanshuN/status/jn005",
+      "created_at": "2026-06-01T20:15:00+05:30",
+      "author": { "handle": "JeevanshuN", "name": "Jeevanshu Narang", "followers": 8800, "following": 540, "verified": false, "tier": "design" },
+      "engagement": { "likes": 41, "reposts": 5, "replies": 181, "quotes": 9, "bookmarks": 7, "views": 12400 },
+      "content": { "text": "hot take: Figma has made designers worse.\n\nwe prototype pixel-perfect screens nobody asked for instead of solving the actual problem on paper first.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic",
+      "_note": "Designed to trip the controversy guard: replies (181) >> likes (41). High views via argument, not value."
+    },
+    {
+      "id": "jn-006",
+      "url": "https://x.com/JeevanshuN/status/jn006",
+      "created_at": "2026-05-21T10:00:00+05:30",
+      "author": { "handle": "JeevanshuN", "name": "Jeevanshu Narang", "followers": 8800, "following": 540, "verified": false, "tier": "design" },
+      "engagement": { "likes": 55, "reposts": 2, "replies": 7, "quotes": 0, "bookmarks": 14, "views": 3300 },
+      "content": { "text": "small interaction, big delight: when a toggle animates the consequence, not just itself. users trust what they can see happen.", "media_type": "video", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+
+    {
+      "id": "vb-001",
+      "url": "https://x.com/vishlbhardwaj/status/vb001",
+      "created_at": "2026-04-22T21:54:00+05:30",
+      "author": { "handle": "vishlbhardwaj", "name": "Vishal Bhardwaj", "followers": 5600, "following": 410, "verified": false, "tier": "design" },
+      "engagement": { "likes": 466, "reposts": 44, "replies": 32, "quotes": 12, "bookmarks": 411, "views": 68000 },
+      "content": { "text": "Introducing Pastery.\n\nA clipboard app for macOS that brings up all your previous copied items with a single hotkey.\n\nNo more switching between windows. Copy everything at once, paste seamlessly where you need it. All file formats, customisable hotkeys, feels native rather than installed.", "media_type": "video", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true
+    },
+    {
+      "id": "vb-002",
+      "url": "https://x.com/vishlbhardwaj/status/vb002",
+      "created_at": "2026-05-26T18:00:00+05:30",
+      "author": { "handle": "vishlbhardwaj", "name": "Vishal Bhardwaj", "followers": 5600, "following": 410, "verified": false, "tier": "design" },
+      "engagement": { "likes": 48, "reposts": 2, "replies": 6, "quotes": 0, "bookmarks": 19, "views": 3900 },
+      "content": { "text": "shipped a tiny update to Pastery: pinned items. the things you paste 50x a day now sit at the top. small, but it's the feature I use most.", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "vb-003",
+      "url": "https://x.com/vishlbhardwaj/status/vb003",
+      "created_at": "2026-05-31T12:30:00+05:30",
+      "author": { "handle": "vishlbhardwaj", "name": "Vishal Bhardwaj", "followers": 5600, "following": 410, "verified": false, "tier": "design" },
+      "engagement": { "likes": 33, "reposts": 1, "replies": 4, "quotes": 0, "bookmarks": 9, "views": 2700 },
+      "content": { "text": "building in public lesson: people don't bookmark features, they bookmark outcomes. 'paste anything in one hotkey' > 'new clipboard manager'.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "vb-004",
+      "url": "https://x.com/vishlbhardwaj/status/vb004",
+      "created_at": "2026-05-20T09:45:00+05:30",
+      "author": { "handle": "vishlbhardwaj", "name": "Vishal Bhardwaj", "followers": 5600, "following": 410, "verified": false, "tier": "design" },
+      "engagement": { "likes": 27, "reposts": 1, "replies": 3, "quotes": 0, "bookmarks": 7, "views": 2200 },
+      "content": { "text": "generalist designer truth: the more you can build, the less you have to explain. a working prototype ends 90% of design debates.", "media_type": "text", "media_count": 0, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+
+    {
+      "id": "st-001",
+      "url": "https://x.com/saas_teardowns/status/st001",
+      "created_at": "2026-05-27T18:30:00+00:00",
+      "author": { "handle": "saas_teardowns", "name": "Maya Builds [SYNTHETIC DEMO]", "followers": 24000, "following": 310, "verified": true, "tier": "saas_founders" },
+      "engagement": { "likes": 612, "reposts": 88, "replies": 47, "quotes": 21, "bookmarks": 740, "views": 41000 },
+      "content": { "text": "We redesigned one SaaS checkout flow.\n\nConversion went 3.1% -> 4.6% in three weeks. No new features. Just UX.\n\nHere's the exact teardown 🧵\n\n1/ The old flow asked for billing before the user saw value...\n2/ We moved the 'aha' moment ahead of the form...\n3/ One field per screen beat the single long form by 31%...", "media_type": "text", "media_count": 0, "is_thread": true, "thread_len": 8, "has_link": false, "post_type": "original" },
+      "_source": "synthetic",
+      "_note": "Stand-in for a real Tier-2 build-in-public author (e.g. @thepatwalls / @levelsio) until that data is collected. Designed as the DURABLE engine exemplar: consistently high bookmarks across posts."
+    },
+    {
+      "id": "st-002",
+      "url": "https://x.com/saas_teardowns/status/st002",
+      "created_at": "2026-05-23T17:00:00+00:00",
+      "author": { "handle": "saas_teardowns", "name": "Maya Builds [SYNTHETIC DEMO]", "followers": 24000, "following": 310, "verified": true, "tier": "saas_founders" },
+      "engagement": { "likes": 540, "reposts": 71, "replies": 38, "quotes": 18, "bookmarks": 690, "views": 38000 },
+      "content": { "text": "How we cut onboarding from 6 steps to 2 and activation jumped 23%.\n\nThe trick wasn't removing steps. It was removing decisions. 🧵", "media_type": "text", "media_count": 0, "is_thread": true, "thread_len": 7, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "st-003",
+      "url": "https://x.com/saas_teardowns/status/st003",
+      "created_at": "2026-05-30T16:15:00+00:00",
+      "author": { "handle": "saas_teardowns", "name": "Maya Builds [SYNTHETIC DEMO]", "followers": 24000, "following": 310, "verified": true, "tier": "saas_founders" },
+      "engagement": { "likes": 588, "reposts": 79, "replies": 42, "quotes": 19, "bookmarks": 705, "views": 39500 },
+      "content": { "text": "Pricing page teardown: a $40M ARR SaaS vs a $0 one.\n\nThe difference isn't the price. It's that one anchors on outcomes and the other lists features. Breakdown 🧵", "media_type": "image", "media_count": 1, "is_thread": true, "thread_len": 9, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "st-004",
+      "url": "https://x.com/saas_teardowns/status/st004",
+      "created_at": "2026-06-02T17:45:00+00:00",
+      "author": { "handle": "saas_teardowns", "name": "Maya Builds [SYNTHETIC DEMO]", "followers": 24000, "following": 310, "verified": true, "tier": "saas_founders" },
+      "engagement": { "likes": 1020, "reposts": 142, "replies": 61, "quotes": 34, "bookmarks": 1500, "views": 78000 },
+      "content": { "text": "I audited 50 B2B SaaS onboardings. 41 made the same mistake:\n\nthey ask the user to configure before they let them feel the value.\n\nConfiguration is work. Value is the reward. You're charging rent before showing the apartment. 🧵", "media_type": "text", "media_count": 0, "is_thread": true, "thread_len": 12, "has_link": false, "post_type": "original" },
+      "_source": "synthetic",
+      "_note": "This author's own breakout -> should surface as PEAK (high baseline AND high breakout)."
+    },
+    {
+      "id": "st-005",
+      "url": "https://x.com/saas_teardowns/status/st005",
+      "created_at": "2026-05-21T15:30:00+00:00",
+      "author": { "handle": "saas_teardowns", "name": "Maya Builds [SYNTHETIC DEMO]", "followers": 24000, "following": 310, "verified": true, "tier": "saas_founders" },
+      "engagement": { "likes": 505, "reposts": 64, "replies": 33, "quotes": 15, "bookmarks": 640, "views": 36000 },
+      "content": { "text": "Empty states are the most underpriced real estate in SaaS.\n\nMost teams ship 'No data yet.' The good ones ship a one-click path to the first win. Here's 5 done right 🧵", "media_type": "image", "media_count": 5, "is_thread": true, "thread_len": 6, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+    {
+      "id": "st-006",
+      "url": "https://x.com/saas_teardowns/status/st006",
+      "created_at": "2026-05-25T16:00:00+00:00",
+      "author": { "handle": "saas_teardowns", "name": "Maya Builds [SYNTHETIC DEMO]", "followers": 24000, "following": 310, "verified": true, "tier": "saas_founders" },
+      "engagement": { "likes": 477, "reposts": 58, "replies": 29, "quotes": 13, "bookmarks": 612, "views": 34500 },
+      "content": { "text": "Your settings page is a graveyard of indecision.\n\nEvery toggle you add is a decision you couldn't make for the user. Defaults are a design skill. 🧵", "media_type": "text", "media_count": 0, "is_thread": true, "thread_len": 5, "has_link": false, "post_type": "original" },
+      "_source": "synthetic"
+    },
+
+    {
+      "id": "lu-001",
+      "url": "https://x.com/luusssso/status/lu001",
+      "created_at": "2026-05-24T00:16:00+00:00",
+      "author": { "handle": "luusssso", "name": "lusso", "followers": 16000, "following": 600, "verified": false, "tier": "design" },
+      "engagement": { "likes": 3100, "reposts": 313, "replies": 41, "quotes": 28, "bookmarks": 1100, "views": 718100 },
+      "content": { "text": "These vintage Rolex advertisements got me kinda fired up ngl", "media_type": "image", "media_count": 4, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Huge engagement but OFF-TOPIC for Bricx (vintage ad nostalgia, not SaaS UX). Should be EXCLUDED by the relevance filter despite 718K views. Proves the agent has judgement, not just an engagement sort."
+    },
+    {
+      "id": "lu-002",
+      "url": "https://x.com/luusssso/status/lu002",
+      "created_at": "2026-06-02T07:11:00+00:00",
+      "author": { "handle": "luusssso", "name": "lusso", "followers": 16000, "following": 600, "verified": false, "tier": "design" },
+      "engagement": { "likes": 1800, "reposts": 186, "replies": 17, "quotes": 14, "bookmarks": 401, "views": 74000 },
+      "content": { "text": "I wanna live in the 1985 IKEA Catalogue", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Same as lu-001: off-topic, should be filtered out."
+    },
+
+    {
+      "id": "bx-001",
+      "url": "https://x.com/bricxlabs/status/bx001",
+      "created_at": "2026-04-12T16:22:00+05:30",
+      "author": { "handle": "bricxlabs", "name": "Bricx | UI/UX Design Agency For SaaS", "followers": 110, "following": 1, "verified": false, "tier": "bricx_brand" },
+      "engagement": { "likes": 82, "reposts": 5, "replies": 17, "quotes": 2, "bookmarks": 21, "views": 3062 },
+      "content": { "text": "Designed at @bricxlabs, just for fun. 🎨 [reposted from @coleHardik]", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "quote" },
+      "_source": "real",
+      "_note": "Brand account's best post — and it's a REPOST of an employee's casual work. Human-fronted beat the corporate feed ~4x."
+    },
+    {
+      "id": "bx-002",
+      "url": "https://x.com/bricxlabs/status/bx002",
+      "created_at": "2025-07-02T11:00:00+05:30",
+      "author": { "handle": "bricxlabs", "name": "Bricx | UI/UX Design Agency For SaaS", "followers": 110, "following": 1, "verified": false, "tier": "bricx_brand" },
+      "engagement": { "likes": 0, "reposts": 0, "replies": 0, "quotes": 0, "bookmarks": 0, "views": 700 },
+      "content": { "text": "To-Do Card Component", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real",
+      "_note": "Typical brand post: faceless portfolio dump, no hook, near-zero engagement. The dead-account baseline."
+    },
+    {
+      "id": "bx-003",
+      "url": "https://x.com/bricxlabs/status/bx003",
+      "created_at": "2025-06-30T10:30:00+05:30",
+      "author": { "handle": "bricxlabs", "name": "Bricx | UI/UX Design Agency For SaaS", "followers": 110, "following": 1, "verified": false, "tier": "bricx_brand" },
+      "engagement": { "likes": 3, "reposts": 0, "replies": 0, "quotes": 0, "bookmarks": 1, "views": 828 },
+      "content": { "text": "Website UX Design for Glossy", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
+      "_source": "real"
+    }
+
+  ]
+}
