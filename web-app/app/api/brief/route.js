@@ -7,8 +7,30 @@ export const maxDuration = 60;
 
 const MODEL = process.env.MODEL || 'claude-sonnet-4-6';
 
+// Best-effort in-memory rate limit so a public demo can't run up your bill.
+// NOTE: serverless instances are ephemeral → this is per-instance (soft). For hard
+// limits across instances, use Vercel KV / Upstash Redis keyed by IP.
+const WINDOW_MS = 10 * 60 * 1000;
+const MAX_PER_WINDOW = 5;
+const hits = new Map();
+function isRateLimited(ip) {
+  const now = Date.now();
+  const recent = (hits.get(ip) || []).filter((t) => now - t < WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+  return recent.length > MAX_PER_WINDOW;
+}
+
 export async function POST(req) {
   try {
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+    if (isRateLimited(ip)) {
+      return Response.json(
+        { error: 'Rate limit: max 5 briefs per 10 minutes. Try again shortly.' },
+        { status: 429 }
+      );
+    }
+
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) {
       return Response.json(
