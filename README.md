@@ -42,6 +42,10 @@ Two design beats make it more than "sort by likes":
 
 ## High-Level Design (HLD)
 
+> 📊 **Visual diagrams** (system context, container, flow, decision logic, sequence,
+> deployment) with a principal-engineer's guide to drawing them:
+> **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)** — renders on GitHub.
+
 The system is a **weekly batch pipeline** split into a deterministic half (cheap, fast,
 testable, no tokens) and a judgement half (LLM). Volatility (data access) is isolated behind
 one adapter; everything else is stable.
