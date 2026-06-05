@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bricx Content Engine — know what to post, and why</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <div class="brand"><span class="dot"></span> Bricx Content Engine</div>
+      <a class="btn" href="dashboard.html">View this week's brief →</a>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <span class="eyebrow">Weekly AI content agent · built in Claude Code</span>
+    <h1>Know <span class="grad">what to post.</span><br />And exactly why.</h1>
+    <p class="sub">
+      Every week, it finds the best-performing content in your niche on X, explains
+      <em>why</em> it worked, and hands your team ready-to-post ideas — in your voice,
+      laddered to revenue. Not a scheduler. The strategist that tells the scheduler what to make.
+    </p>
+    <div class="cta-row">
+      <a class="btn" href="dashboard.html">Open the dashboard →</a>
+      <a class="btn ghost" href="#how">How it works</a>
+    </div>
+  </header>
+
+  <section class="block wrap">
+    <div class="section-title">Every week, automatically</div>
+    <div class="section-h">Four steps, zero busywork</div>
+    <div class="grid cols-4">
+      <div class="card"><div class="step-n">01 · Research</div><h3>Find the signal</h3><p>Pulls top posts from a curated set of accounts in your industry over the past week.</p></div>
+      <div class="card"><div class="step-n">02 · Analyze</div><h3>Explain the why</h3><p>Ranks by engagement relative to each author's own baseline — then names the pattern behind each winner.</p></div>
+      <div class="card"><div class="step-n">03 · Ideate</div><h3>On-brand ideas</h3><p>Generates drafts in your voice, each traced back to a proven pattern and a reason.</p></div>
+      <div class="card"><div class="step-n">04 · Package</div><h3>An executable brief</h3><p>A self-contained weekly brief a content writer can run cold — ideas, drafts, post times.</p></div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="how">
+    <div class="section-title">How it works</div>
+    <div class="section-h">A deterministic spine, an intelligent edge</div>
+    <div class="pipeline">                 ┌── code (no tokens) ──┐   ┌──── LLM agents ────┐
+ DataProvider ─► score ─► filter ─► rank ─► shortlist ─►  Analyst ─► Ideator ─► Packager ─► BRIEF
+ (sample/live)   weighted  relevance  Ride-Now /          why it    on-brand   executable
+                 + quadrant + guard    Build-Engine        worked    ideas      weekly doc</div>
+  </section>
+
+  <section class="block wrap">
+    <div class="section-title">Why it's different</div>
+    <div class="section-h">Judgement, not an engagement sort</div>
+    <div class="grid cols-3">
+      <div class="card"><h3>🎯 It filters for relevance</h3><p>A 718K-view post that's off-topic gets <strong>excluded</strong>, not crowned. The agent knows your niche.</p></div>
+      <div class="card"><h3>📈 Viral vs durable</h3><p>Separates one-off spikes (ride this week) from repeatable formulas (build into the rotation). Two different plays.</p></div>
+      <div class="card"><h3>🛡️ Stays on brand</h3><p>Drafts in your founder voice, flags controversy, and keeps a human in the loop — it drafts, you approve.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Built in Claude Code for Bricx Labs · the agent drafts, a human approves before anything posts.
+  </footer>
+</body>
+</html>
