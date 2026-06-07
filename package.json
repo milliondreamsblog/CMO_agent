@@ -7,6 +7,7 @@
   "scripts": {
     "analyze": "node scripts/run-analysis.js",
     "analyze:json": "node scripts/run-analysis.js --json",
+    "scrape": "node scripts/scrape.js",
     "brief": "node scripts/generate-brief.js",
     "weekly": "npm run analyze && node scripts/generate-brief.js",
     "build:dashboard": "node scripts/build-dashboard.js",

@@ -9,7 +9,10 @@ export function sampleProvider() {
   return {
     name: 'sample',
     async getPosts({ since, until } = {}) {
-      const raw = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/sample_posts.json'), 'utf8'));
+      // Reads the sample set by default, or any cached file via DATA_FILE
+      // (e.g. data/live_posts.json from `npm run scrape`).
+      const file = process.env.DATA_FILE || 'data/sample_posts.json';
+      const raw = JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'));
       let posts = raw.posts || [];
       // In production the window is the last 7 days; the curated demo set is
       // treated as "the week's pull", so by default we return all of it.

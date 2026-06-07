@@ -13,6 +13,9 @@ dist/
 .env.local
 .env.*.local
 
+# scraped live data (generated; keep third-party content out of the repo)
+data/live_posts.json
+
 # logs / os
 *.log
 .DS_Store
