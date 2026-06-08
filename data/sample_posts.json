@@ -274,6 +274,51 @@
       "engagement": { "likes": 3, "reposts": 0, "replies": 0, "quotes": 0, "bookmarks": 1, "views": 828 },
       "content": { "text": "Website UX Design for Glossy", "media_type": "image", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": false, "post_type": "original" },
       "_source": "real"
+    },
+
+    {
+      "id": "bt-001",
+      "url": "https://x.com/baothiento/status/bt001",
+      "created_at": "2026-06-08T00:00:00+00:00",
+      "author": { "handle": "baothiento", "name": "Bao To", "followers": 4000, "following": 7000, "verified": true, "tier": "design_engineer" },
+      "engagement": { "likes": 62, "reposts": 1, "replies": 8, "quotes": 0, "bookmarks": 0, "views": 1900 },
+      "content": { "text": "papaya flowers", "media_type": "video", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": true, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Off-topic personal post (nature) — should be filtered out by relevance despite a real audience."
+    },
+    {
+      "id": "bt-002",
+      "url": "https://x.com/baothiento/status/bt002",
+      "created_at": "2026-06-07T00:00:00+00:00",
+      "author": { "handle": "baothiento", "name": "Bao To", "followers": 4000, "following": 7000, "verified": true, "tier": "design_engineer" },
+      "engagement": { "likes": 154, "reposts": 3, "replies": 12, "quotes": 0, "bookmarks": 0, "views": 9000 },
+      "content": { "text": "feeding my lab frogs", "media_type": "video", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": true, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Off-topic personal post (pets) — filtered out by relevance."
+    },
+    {
+      "id": "bt-003",
+      "url": "https://x.com/baothiento/status/bt003",
+      "created_at": "2026-05-25T00:00:00+00:00",
+      "author": { "handle": "baothiento", "name": "Bao To", "followers": 4000, "following": 7000, "verified": true, "tier": "design_engineer" },
+      "engagement": { "likes": 206, "reposts": 9, "replies": 18, "quotes": 0, "bookmarks": 45, "views": 12000 },
+      "content": { "text": "As a designer, I've designed with code almost every single day this past year, across my company & personal projects. In 2024, I only made 84 commits, and much of my work still lived in Figma/Adobe. A lot changed — AI tooling obviously helped...", "media_type": "image", "media_count": 1, "is_thread": true, "thread_len": 6, "has_link": false, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "On-topic: design-engineering / code-first workflow + AI tooling. Bookmark-heavy insight thread — the kind of content Bricx should learn from."
+    },
+    {
+      "id": "bt-004",
+      "url": "https://x.com/baothiento/status/bt004",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "author": { "handle": "baothiento", "name": "Bao To", "followers": 4000, "following": 7000, "verified": true, "tier": "design_engineer" },
+      "engagement": { "likes": 359, "reposts": 12, "replies": 22, "quotes": 0, "bookmarks": 78, "views": 19000 },
+      "content": { "text": "per popular demand, i made a pomodoro timer with my animal sims 😆", "media_type": "video", "media_count": 1, "is_thread": false, "thread_len": 1, "has_link": true, "post_type": "original" },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Highest engagement in the set, but the keyword filter drops it (no SaaS/UX term) — a deliberate edge case showing the keyword filter's limit; semantic relevance (the LLM Analyst) would catch it as design-engineering build-in-public."
     }
 
   ]
