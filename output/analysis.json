@@ -2,9 +2,9 @@
   "provider": "sample",
   "window": {},
   "counts": {
-    "total": 27,
-    "relevant": 24,
-    "excluded": 3,
+    "total": 31,
+    "relevant": 26,
+    "excluded": 5,
     "ride_now": 5,
     "engine": 12
   },
@@ -47,7 +47,7 @@
         "author_baseline_weighted": 130,
         "author_baseline_rate": 0.0378766339869281,
         "breakout": 21.607692307692307,
-        "baseline_pct": 25,
+        "baseline_pct": 20,
         "quadrant": "trend"
       },
       "flags": {
@@ -97,7 +97,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 3.7410468319559227,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "trend"
       },
       "flags": {
@@ -149,7 +149,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 3.371900826446281,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "trend"
       },
       "flags": {
@@ -200,7 +200,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 2.7405541561712847,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "proven_peak"
       },
       "flags": {
@@ -619,7 +619,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 1.3702770780856424,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -668,7 +668,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 0.871536523929471,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -719,7 +719,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 0.6700251889168766,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -768,7 +768,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 0.9370277078085643,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -817,7 +817,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 1.0629722921914357,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -866,7 +866,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 2.7405541561712847,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "proven_peak"
       },
       "flags": {
@@ -1071,7 +1071,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 0.4738292011019284,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "noise"
       },
       "flags": {
@@ -1178,6 +1178,104 @@
         "matched": [],
         "controversial": false
       }
+    },
+    {
+      "id": "bt-002",
+      "url": "https://x.com/baothiento/status/bt002",
+      "created_at": "2026-06-07T00:00:00+00:00",
+      "author": {
+        "handle": "baothiento",
+        "name": "Bao To",
+        "followers": 4000,
+        "following": 7000,
+        "verified": true,
+        "tier": "design_engineer"
+      },
+      "engagement": {
+        "likes": 154,
+        "reposts": 3,
+        "replies": 12,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9000
+      },
+      "content": {
+        "text": "feeding my lab frogs",
+        "media_type": "video",
+        "media_count": 1,
+        "is_thread": false,
+        "thread_len": 1,
+        "has_link": true,
+        "post_type": "original"
+      },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Off-topic personal post (pets) — filtered out by relevance.",
+      "metrics": {
+        "weighted": 199,
+        "reach": 9000,
+        "rate": 0.022111111111111113,
+        "author_baseline_weighted": 355.5,
+        "author_baseline_rate": 0.043728070175438595,
+        "breakout": 0.559774964838256,
+        "baseline_pct": 40,
+        "quadrant": "noise"
+      },
+      "flags": {
+        "relevant": false,
+        "relevance_score": 0,
+        "matched": [],
+        "controversial": false
+      }
+    },
+    {
+      "id": "bt-004",
+      "url": "https://x.com/baothiento/status/bt004",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "author": {
+        "handle": "baothiento",
+        "name": "Bao To",
+        "followers": 4000,
+        "following": 7000,
+        "verified": true,
+        "tier": "design_engineer"
+      },
+      "engagement": {
+        "likes": 359,
+        "reposts": 12,
+        "replies": 22,
+        "quotes": 0,
+        "bookmarks": 78,
+        "views": 19000
+      },
+      "content": {
+        "text": "per popular demand, i made a pomodoro timer with my animal sims 😆",
+        "media_type": "video",
+        "media_count": 1,
+        "is_thread": false,
+        "thread_len": 1,
+        "has_link": true,
+        "post_type": "original"
+      },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Highest engagement in the set, but the keyword filter drops it (no SaaS/UX term) — a deliberate edge case showing the keyword filter's limit; semantic relevance (the LLM Analyst) would catch it as design-engineering build-in-public.",
+      "metrics": {
+        "weighted": 851,
+        "reach": 19000,
+        "rate": 0.044789473684210525,
+        "author_baseline_weighted": 355.5,
+        "author_baseline_rate": 0.043728070175438595,
+        "breakout": 2.3938115330520393,
+        "baseline_pct": 40,
+        "quadrant": "trend"
+      },
+      "flags": {
+        "relevant": false,
+        "relevance_score": 0,
+        "matched": [],
+        "controversial": false
+      }
     }
   ],
   "all": [
@@ -1218,7 +1316,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 2.7405541561712847,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "proven_peak"
       },
       "flags": {
@@ -1269,7 +1367,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 0.871536523929471,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -1320,7 +1418,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 0.6700251889168766,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -1369,7 +1467,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 0.9370277078085643,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -1418,7 +1516,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 1.3702770780856424,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -1467,7 +1565,7 @@
         "author_baseline_weighted": 198.5,
         "author_baseline_rate": 0.05882423117709438,
         "breakout": 1.0629722921914357,
-        "baseline_pct": 75,
+        "baseline_pct": 80,
         "quadrant": "durable"
       },
       "flags": {
@@ -1517,7 +1615,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 3.371900826446281,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "trend"
       },
       "flags": {
@@ -1568,7 +1666,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 0.8650137741046832,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "noise"
       },
       "flags": {
@@ -1618,7 +1716,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 0.4738292011019284,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "noise"
       },
       "flags": {
@@ -1665,7 +1763,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 1.1349862258953167,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "noise"
       },
       "flags": {
@@ -1717,7 +1815,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 3.7410468319559227,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "trend"
       },
       "flags": {
@@ -1768,7 +1866,7 @@
         "author_baseline_weighted": 181.5,
         "author_baseline_rate": 0.04611853832442067,
         "breakout": 0.837465564738292,
-        "baseline_pct": 50,
+        "baseline_pct": 60,
         "quadrant": "noise"
       },
       "flags": {
@@ -1820,7 +1918,7 @@
         "author_baseline_weighted": 130,
         "author_baseline_rate": 0.0378766339869281,
         "breakout": 21.607692307692307,
-        "baseline_pct": 25,
+        "baseline_pct": 20,
         "quadrant": "trend"
       },
       "flags": {
@@ -1869,7 +1967,7 @@
         "author_baseline_weighted": 130,
         "author_baseline_rate": 0.0378766339869281,
         "breakout": 1.2846153846153847,
-        "baseline_pct": 25,
+        "baseline_pct": 20,
         "quadrant": "noise"
       },
       "flags": {
@@ -1918,7 +2016,7 @@
         "author_baseline_weighted": 130,
         "author_baseline_rate": 0.0378766339869281,
         "breakout": 0.7153846153846154,
-        "baseline_pct": 25,
+        "baseline_pct": 20,
         "quadrant": "noise"
       },
       "flags": {
@@ -1968,7 +2066,7 @@
         "author_baseline_weighted": 130,
         "author_baseline_rate": 0.0378766339869281,
         "breakout": 0.5692307692307692,
-        "baseline_pct": 25,
+        "baseline_pct": 20,
         "quadrant": "noise"
       },
       "flags": {
@@ -2541,6 +2639,207 @@
           "ux",
           "design"
         ],
+        "controversial": false
+      }
+    },
+    {
+      "id": "bt-001",
+      "url": "https://x.com/baothiento/status/bt001",
+      "created_at": "2026-06-08T00:00:00+00:00",
+      "author": {
+        "handle": "baothiento",
+        "name": "Bao To",
+        "followers": 4000,
+        "following": 7000,
+        "verified": true,
+        "tier": "design_engineer"
+      },
+      "engagement": {
+        "likes": 62,
+        "reposts": 1,
+        "replies": 8,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 1900
+      },
+      "content": {
+        "text": "papaya flowers",
+        "media_type": "video",
+        "media_count": 1,
+        "is_thread": false,
+        "thread_len": 1,
+        "has_link": true,
+        "post_type": "original"
+      },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Off-topic personal post (nature) — should be filtered out by relevance despite a real audience.",
+      "metrics": {
+        "weighted": 89,
+        "reach": 1900,
+        "rate": 0.04684210526315789,
+        "author_baseline_weighted": 355.5,
+        "author_baseline_rate": 0.043728070175438595,
+        "breakout": 0.25035161744022505,
+        "baseline_pct": 40,
+        "quadrant": "noise"
+      },
+      "flags": {
+        "relevant": true,
+        "relevance_score": 1,
+        "matched": [
+          "flow"
+        ],
+        "controversial": false
+      }
+    },
+    {
+      "id": "bt-002",
+      "url": "https://x.com/baothiento/status/bt002",
+      "created_at": "2026-06-07T00:00:00+00:00",
+      "author": {
+        "handle": "baothiento",
+        "name": "Bao To",
+        "followers": 4000,
+        "following": 7000,
+        "verified": true,
+        "tier": "design_engineer"
+      },
+      "engagement": {
+        "likes": 154,
+        "reposts": 3,
+        "replies": 12,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 9000
+      },
+      "content": {
+        "text": "feeding my lab frogs",
+        "media_type": "video",
+        "media_count": 1,
+        "is_thread": false,
+        "thread_len": 1,
+        "has_link": true,
+        "post_type": "original"
+      },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Off-topic personal post (pets) — filtered out by relevance.",
+      "metrics": {
+        "weighted": 199,
+        "reach": 9000,
+        "rate": 0.022111111111111113,
+        "author_baseline_weighted": 355.5,
+        "author_baseline_rate": 0.043728070175438595,
+        "breakout": 0.559774964838256,
+        "baseline_pct": 40,
+        "quadrant": "noise"
+      },
+      "flags": {
+        "relevant": false,
+        "relevance_score": 0,
+        "matched": [],
+        "controversial": false
+      }
+    },
+    {
+      "id": "bt-003",
+      "url": "https://x.com/baothiento/status/bt003",
+      "created_at": "2026-05-25T00:00:00+00:00",
+      "author": {
+        "handle": "baothiento",
+        "name": "Bao To",
+        "followers": 4000,
+        "following": 7000,
+        "verified": true,
+        "tier": "design_engineer"
+      },
+      "engagement": {
+        "likes": 206,
+        "reposts": 9,
+        "replies": 18,
+        "quotes": 0,
+        "bookmarks": 45,
+        "views": 12000
+      },
+      "content": {
+        "text": "As a designer, I've designed with code almost every single day this past year, across my company & personal projects. In 2024, I only made 84 commits, and much of my work still lived in Figma/Adobe. A lot changed — AI tooling obviously helped...",
+        "media_type": "image",
+        "media_count": 1,
+        "is_thread": true,
+        "thread_len": 6,
+        "has_link": false,
+        "post_type": "original"
+      },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "On-topic: design-engineering / code-first workflow + AI tooling. Bookmark-heavy insight thread — the kind of content Bricx should learn from.",
+      "metrics": {
+        "weighted": 512,
+        "reach": 12000,
+        "rate": 0.042666666666666665,
+        "author_baseline_weighted": 355.5,
+        "author_baseline_rate": 0.043728070175438595,
+        "breakout": 1.440225035161744,
+        "baseline_pct": 40,
+        "quadrant": "noise"
+      },
+      "flags": {
+        "relevant": true,
+        "relevance_score": 2,
+        "matched": [
+          "design",
+          "figma"
+        ],
+        "controversial": false
+      }
+    },
+    {
+      "id": "bt-004",
+      "url": "https://x.com/baothiento/status/bt004",
+      "created_at": "2026-05-06T00:00:00+00:00",
+      "author": {
+        "handle": "baothiento",
+        "name": "Bao To",
+        "followers": 4000,
+        "following": 7000,
+        "verified": true,
+        "tier": "design_engineer"
+      },
+      "engagement": {
+        "likes": 359,
+        "reposts": 12,
+        "replies": 22,
+        "quotes": 0,
+        "bookmarks": 78,
+        "views": 19000
+      },
+      "content": {
+        "text": "per popular demand, i made a pomodoro timer with my animal sims 😆",
+        "media_type": "video",
+        "media_count": 1,
+        "is_thread": false,
+        "thread_len": 1,
+        "has_link": true,
+        "post_type": "original"
+      },
+      "_source": "real",
+      "_followers_estimated": true,
+      "_note": "Highest engagement in the set, but the keyword filter drops it (no SaaS/UX term) — a deliberate edge case showing the keyword filter's limit; semantic relevance (the LLM Analyst) would catch it as design-engineering build-in-public.",
+      "metrics": {
+        "weighted": 851,
+        "reach": 19000,
+        "rate": 0.044789473684210525,
+        "author_baseline_weighted": 355.5,
+        "author_baseline_rate": 0.043728070175438595,
+        "breakout": 2.3938115330520393,
+        "baseline_pct": 40,
+        "quadrant": "trend"
+      },
+      "flags": {
+        "relevant": false,
+        "relevance_score": 0,
+        "matched": [],
         "controversial": false
       }
     }
