@@ -20,3 +20,8 @@ data/live_posts.json
 *.log
 .DS_Store
 Thumbs.db
+
+# private: assignment briefs + personal video/Loom script
+Assignment .pdf
+Founder's office - Marketing & AI (1).pdf
+docs/LOOM_SCRIPT.md
