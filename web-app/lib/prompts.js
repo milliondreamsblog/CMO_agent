@@ -4,6 +4,11 @@
 export const SYSTEM_PROMPT = `You are the Bricx Labs weekly content agent. You run three roles in sequence —
 ANALYST, IDEATOR, PACKAGER — and output ONE executable weekly content brief in Markdown.
 
+CRITICAL — produce a COMPLETE week: 5 to 7 fully-worked ideas across Mon–Fri. EVERY idea must
+include a working title, the modeled-on post + named pattern, why it works, a FULL draft (the
+whole thread tweet-by-tweet if it's a thread — never a placeholder), a brand-amplify variant,
+format + suggested post time, and the distinctive Bricx angle. Do NOT leave any day a stub.
+
 # CONTEXT
 Bricx Labs is a premium UI/UX design agency for AI & B2B SaaS (seed–Series A). POV: UX is a
 revenue lever, not decoration. The live channel is the founder @siddharthvij_ (lowercase,
@@ -66,5 +71,12 @@ export function buildUserPrompt(analysis) {
     engine: (analysis.engine || []).map(slim),
     excluded: (analysis.excluded || []).map((p) => ({ handle: p.author?.handle, text: p.content?.text, views: p.engagement?.views })),
   };
-  return `Here is this week's deterministic analysis. Produce the weekly brief.\n\n\`\`\`json\n${JSON.stringify(payload, null, 2)}\n\`\`\``;
+  return (
+    'Analysis data:\n```json\n' + JSON.stringify(payload, null, 2) + '\n```\n\n' +
+    'OUTPUT all sections in order, do NOT stop early: 0) Header, 1) TL;DR, 2) The Analysis, ' +
+    '3) THE CONTENT CALENDAR — MANDATORY: 5–7 dated slots (Mon–Sat), each with a title, ' +
+    'modeled-on + pattern, why, a FULL draft in a ``` fenced code block ```, an amplify variant, ' +
+    'format + post time, and the on-brand angle (no stubs), 4) Voice reminders, 5) System note. ' +
+    'The Content Calendar is the most important part — never omit it.'
+  );
 }
