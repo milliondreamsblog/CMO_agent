@@ -89,3 +89,37 @@ The engine isn't one trick — it's a *stack*. The recurring winners:
 - **Community question** = audience-question hook + poll/options format. *(Sid's
   proven, cheap, reply-driven engine.)*
 - **Milestone proof** = big-number hook + build-in-public angle + video. *(Sid's PEAK.)*
+
+---
+
+## 7 · Distilled from creator SOPs
+Named frameworks pulled from growth creators' playbooks. We take the *structural* tools and
+**leave the attention-at-all-costs ethos out** (no rage-bait / "be a savage" — off-brand for a
+premium agency; that's what the controversy guard protects against).
+
+**Hook formulas (fill-in-the-blank)** — pair with §1 hooks:
+- "You're making 3 mistakes with **{topic}** — here's how to fix them"
+- "I looked at the top **{people}** and here's what they don't tell you"
+- "Why isn't **{trend}** working anymore?"
+- **60/40 rule:** spend 60% of your effort on the first line. The hook is the post.
+
+**PAIPS** (structure — a richer PAS):
+Problem → Agitate → **Intrigue** (tease something surprising) → **Positive future** (life after the fix) → Solution. Strong for teardown threads.
+
+**The 4A angle lens** — pick one per post so angles stay varied:
+- **Actionable** (step-by-step how-to) · **Analytical** (numbers/stats) · **Aspirational** (transformation story) · **Anthropological** (why it matters to people). *Bricx leans Actionable + Analytical.*
+
+**Relatable enemy** ⚠ — rally against a shared foe. Use ONLY when the "enemy" is a *principle*
+("design as decoration", "config before value"), never a person. Otherwise it's off-brand.
+
+**Production playbook (repurposing)** — how the team executes one idea across the week:
+write one long piece (a teardown) → atomize into 5–10 tweets, 1 carousel, 1–2 LinkedIn posts,
+1 short video. Test ideas as tweets first; promote the winners to long-form; repost evergreen
+winners every 3–6 months.
+
+**Writing craft (universal)** — distilled from essay-craft SOPs; the few principles that
+transfer to short-form (the long-form structure advice was deliberately left out):
+- **One clear purpose per post** — if you can't say the point in one sentence, cut or refocus.
+- **Cut the fluff** — every word earns its place; kill adjectives/setup that don't serve the point.
+- **Show, then tell** — concrete detail/numbers first, then the lesson. (Telling is fine for the takeaway.)
+- **Fresh metaphors over clichés** — a specific image beats a tired one; skip "game-changer"-tier phrasing.
