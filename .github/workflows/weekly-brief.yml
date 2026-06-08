@@ -30,7 +30,7 @@ jobs:
       #    NOTE: default provider is `sample`. Swap in a live Apify/X-API provider for real data.
       - run: node scripts/generate-brief.js
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       # 3) open a PR with the new brief for a human to approve
       - name: Open PR with the brief

@@ -1,47 +1,37 @@
 # Deploying the web-app to Vercel
 
 The interactive app lives in `web-app/` (Next.js + a serverless `/api/brief` route that calls
-Gemini). There are **two ways** to deploy — pick ONE.
+Gemini). It is **already live** — deployed via the Vercel CLI (no token/secret needed):
+
+> **Live:** https://web-app-self-mu.vercel.app
+
+`Analyze` works fully (client-side). `Generate brief` needs `GEMINI_API_KEY` set in the Vercel
+project env (see below).
 
 ---
 
-## Option A — Vercel dashboard (recommended, simplest, no YAML)
+## Redeploy (CLI — what we used)
+From the repo, you're logged in as the Vercel user already, so:
+```bash
+cd web-app
+npx vercel --prod      # deploys to production
+```
+`web-app/vercel.json` pins the framework/build + the `/api/brief` 60s timeout.
 
-1. Go to **[vercel.com](https://vercel.com)** → sign in with GitHub.
-2. **Add New → Project** → import the `CMO_agent` repo.
-3. **Root Directory → `web-app`** (click Edit and select the folder). ← the step people miss.
-4. Framework auto-detects **Next.js**. Leave build settings default (`vercel.json` pins them anyway).
-5. **Environment Variables** → add:
-   - `GEMINI_API_KEY` = your key (`AIza…`)  *(get one free at aistudio.google.com/apikey)*
-   - *(optional)* `GEMINI_MODEL` = `gemini-2.5-flash`
-6. **Deploy** → live `*.vercel.app` URL in ~1 min. Auto-deploys on every push, with preview URLs per PR.
+## Auto-deploy on every push (no secrets)
+Link the repo to the Vercel project once, in the **dashboard** — this is cleaner than a CI token:
+1. vercel.com → the `web-app` project → **Settings → Git** → **Connect** the `CMO_agent` repo.
+2. Set **Root Directory = `web-app`**.
+3. Now every push to `main` auto-deploys, with preview URLs per PR. No GitHub Actions, no tokens.
 
-That's it. `Analyze` runs client-side (no key needed); `Generate brief` uses the serverless route + your key.
-
----
-
-## Option B — GitHub Actions (`.github/workflows/deploy.yml`)
-
-Use this if you want CI-controlled deploys instead of the dashboard integration.
-**If you use this, disable the dashboard auto-deploy** (or delete the workflow) so you don't double-build.
-
-**One-time setup:**
-1. Locally: `cd web-app && npx vercel link` → creates `web-app/.vercel/project.json` with your `orgId` + `projectId`.
-2. Add three **repo secrets** (Settings → Secrets and variables → Actions):
-   - `VERCEL_TOKEN` — Vercel → Account Settings → Tokens
-   - `VERCEL_ORG_ID` — the `orgId` from `project.json`
-   - `VERCEL_PROJECT_ID` — the `projectId` from `project.json`
-3. In the **Vercel project's** Environment Variables, set `GEMINI_API_KEY` (the workflow pulls these via `vercel pull`).
-
-Then every push to `main` that touches `web-app/**` builds and deploys to production. Run on demand from the Actions tab.
-
----
-
-## Files
-- `web-app/vercel.json` — pins framework/build + the `/api/brief` function timeout (60s).
-- `.github/workflows/deploy.yml` — the Actions deploy pipeline (Option B).
+## Enable the live "Generate brief" button
+Add the key to the project (then redeploy):
+- **Dashboard:** project → **Settings → Environment Variables** → add `GEMINI_API_KEY` (+ optional `GEMINI_MODEL=gemini-2.5-flash`).
+- **Or CLI:** `cd web-app && npx vercel env add GEMINI_API_KEY production` → paste the value → `npx vercel --prod`.
 
 ## Notes
-- `web-app/.env.local` is **gitignored** and does NOT deploy — set `GEMINI_API_KEY` in Vercel env.
-- The static dashboard (`web/`) can alternatively go on any static host (GitHub Pages / Netlify),
-  but it has no live brief generation — that needs the serverless route (Vercel).
+- `web-app/.env.local` and `web-app/.vercel/` are **gitignored** — your key and project link never get committed.
+- A GitHub Actions deploy workflow was intentionally removed (it needed Vercel tokens). The CLI +
+  dashboard Git integration cover deployment without any secrets.
+- The static dashboard (`web/`) can alternatively go on any static host, but it has no live brief
+  generation (that needs the serverless route on Vercel).
